@@ -69,6 +69,7 @@ class NoteControls extends React.Component{
         showDeleteForm: false,
         noteSelected: false
       })
+      // this.makeUnselectable()
     }
 
     noteSelected(childState){
@@ -172,8 +173,8 @@ class NoteControls extends React.Component{
         }
     }
     showDeleteForm = () => {
+      this.makeSelectable()
       if(!this.state.noteSelected){
-        this.makeSelectable()
         return(
           <h2>Select a note to delete.</h2>
         )
